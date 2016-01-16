@@ -497,7 +497,7 @@ public:
 class Runnable {
 public:
   virtual void run() = 0;
-}
+};
 
 class Human : public Runnable {
 public:
@@ -509,7 +509,7 @@ public:
   void run() { printf("4足歩行\n"); }
 };
 
-void run_three_times(Runnable r) { r.run(); r.run(); r.run(); }
+void run_three_times(Runnable& r) { r.run(); r.run(); r.run(); }
 ```
 ```c++
 void main() {
